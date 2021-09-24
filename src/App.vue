@@ -102,8 +102,8 @@ export default {
       }
     },
     sortear() {
-      var total = this.projetos.map((p) => p.tamanho).reduce((a) => a + 1, 0);
-      var sorteiro = this.getRandom(total);
+      var total = this.projetos.map((p) => p.email).reduce((a) => a + 1, 0);
+      var sorteiro = this.getRandom(total) - 1;
       console.log(sorteiro);
       this.alteracaoIdx = sorteiro;
     },
